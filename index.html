@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        i {
+            pointer-events: none;
+        }
+    </style>
+    <title>Video player</title>
+</head>
+
+<body class="vh-100">
+    <div class="container-fluid bg-light h-100 d-flex justify-content-center align-items-center">
+        <div class="card" style="
+          max-width: 600px;
+          -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+        ">
+            <video id="video" class="card-img-top">
+                <source src="./video.mp4" type="video/mp4">
+            </video>
+            <div class="card-footer d-flex justify-content-between">
+                <div id="video-controls">
+                    <button type="button" class="btn btn-primary" title="Pause video" data-action="play">
+                        <i class="fa-solid fa-play fa-fw"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" title="Backward 10 seconds" data-action="-10">
+                        -   10
+                    </button>
+                    <button type="button" class="btn btn-primary" title="Forward 10 seconds" data-action="+10">
+                        +   10
+                    </button>
+                </div>
+                <div class="my-auto">
+                    <small class="fw-bold">Time remaining: </small>
+                    <small id="time-remaining">
+                        00:00:00
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>
